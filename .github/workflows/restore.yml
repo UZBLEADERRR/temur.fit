@@ -1,0 +1,15 @@
+name: Restore Initial
+on: workflow_dispatch
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git checkout 0d17981
+          git checkout -b first-version
+          git push origin first-version -f
