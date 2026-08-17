@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initCalculator();
-  initFaqAccordion();
 });
 
 // BMI & 40-day target calculation
@@ -49,17 +48,14 @@ function initCalculator() {
     let goalText = '';
 
     if (goal === 'cut') {
-      // 20% deficit for intense fat loss / cutting
       targetCalories = Math.round(tdee * 0.8);
       expectedWeightChange = -(Math.min(10, Math.max(4, weight * 0.08))).toFixed(1);
       goalText = 'Quritish va Relyef';
     } else if (goal === 'loss') {
-      // 25% deficit
       targetCalories = Math.round(tdee * 0.75);
       expectedWeightChange = -(Math.min(12, Math.max(5, weight * 0.09))).toFixed(1);
       goalText = 'Tezkor Ozish';
     } else if (goal === 'lean') {
-      // Slight surplus / maintenance
       targetCalories = Math.round(tdee * 1.05);
       expectedWeightChange = +(2.5).toFixed(1);
       goalText = 'Quruq Mushak';
@@ -102,28 +98,4 @@ function getBmiStatus(bmi) {
   if (val < 25) return 'Normal';
   if (val < 30) return 'Ortiqcha vazn';
   return 'Yuqori vazn';
-}
-
-// FAQ Accordion functionality
-function initFaqAccordion() {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    if (!questionBtn) return;
-
-    questionBtn.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-
-      // Close all
-      faqItems.forEach(otherItem => {
-        otherItem.classList.remove('active');
-      });
-
-      // Toggle current
-      if (!isActive) {
-        item.classList.add('active');
-      }
-    });
-  });
 }
