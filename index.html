@@ -1,767 +1,328 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>TEMUR.FIT · 2026 | Salomatlik, Ong va Tana Transformatsiyasi</title>
-  <meta name="description" content="Temur.fit — Sog'lom tana, kuchli intizom va professional ovqatlanish/mashg'ulot tizimi. Sertifikatlangan trener NPCA / MUSA / WNGP." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>TEMUR.FIT — Transformatsiya</title>
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Background Ambient Glow -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-
-  <!-- Header / Navbar (Mobilda ixcham va toza) -->
-  <header class="site-header">
-    <div class="header-container">
-      <a href="#" class="brand-logo">
-        <span class="logo-accent">TEMUR</span><span class="dot-green">.FIT</span>
-      </a>
-
-      <!-- Quick Nav for Desktop & Mobile -->
-      <nav class="header-nav">
-        <a href="#mind-body" class="nav-link">Sogʻliq & Ong</a>
-        <a href="#results" class="nav-link">Natijalar</a>
-        <a href="#tariffs" class="nav-link">Tariflar</a>
-        <a href="#calculator" class="nav-link">Kalkulyator</a>
-      </nav>
-
-      <div class="header-socials">
-        <a href="https://t.me/karate_patsan" target="_blank" class="social-btn tg" title="Telegram">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-          </svg>
-          <span class="social-text">Aloqa</span>
-        </a>
+  <!-- iOS Dynamic Capsule Header -->
+  <header class="ios-header">
+    <div class="ios-capsule">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-text">TEMUR<strong>FIT</strong></span>
       </div>
+      <a href="https://t.me/temur_fitt" target="_blank" class="capsule-cta">Bogʻlanish</a>
     </div>
   </header>
 
-  <main>
+  <!-- Mobile App Viewport Container -->
+  <main class="ios-app">
+
     <!-- HERO SECTION -->
-    <section class="hero-cover">
-      <div class="hero-inner">
-        
-        <div class="hero-photo-wrapper">
-          <img src="temur.jpg" alt="Temur Fit Coach" class="hero-photo" onerror="this.src='https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&auto=format&fit=crop&q=80'" />
-          <div class="photo-overlay-gradient"></div>
-          <div class="hero-badges">
-            <span class="cert-pill">🏆 Sertifikatlangan trener</span>
-            <span class="cert-pill">NPCA / MUSA / WNGP</span>
+    <section class="screen-hero" id="home">
+      <div class="hero-chip">
+        <span class="pulse-icon">⚡</span> 40 Kunlik Intizom Tizimi
+      </div>
+      <h1 class="hero-title">Tanangni ham, <br><span class="gradient-text">ruhingni ham</span> oʻzgartir.</h1>
+      <p class="hero-sub">Shaxsiy murabbiy, individual ratsion va doimiy nazorat bilan yangi darajaga chiq.</p>
+      
+      <div class="hero-action-group">
+        <a href="https://t.me/temur_fitt" target="_blank" class="ios-btn-primary">
+          <span>Dasturni Boshlash</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="hero-stats-row">
+          <div class="stat-pill">
+            <span class="stat-num">500+</span>
+            <span class="stat-lbl">Natijalar</span>
           </div>
-        </div>
-
-        <div class="hero-content">
-          <div class="pdf-tag">⚡ SYSTEM · NATIJA · INTIZOM</div>
-          <h1 class="main-heading">
-            TANA VA ONGINGIZNI <br />
-            <span class="neon-green">YANGI BOSQICHGA OLIB CHIQING</span>
-          </h1>
-          <p class="main-subheading">
-            Fitnes — bu shunchaki ozish emas. Bu sogʻlom yurak, gormonal muvozanat, temir intizom va oʻzingizga boʻlgan cheksiz ishonch.
-          </p>
-
-          <!-- Quick Navigation Chips -->
-          <div class="format-nav-grid">
-            <a href="#mind-body" class="nav-chip">
-              <span class="nav-num">🧠</span>
-              <span class="nav-title">Sogʻliq & Psixologiya</span>
-            </a>
-            <a href="#results" class="nav-chip highlight-chip">
-              <span class="nav-num">🔥</span>
-              <span class="nav-title">Real Natijalar (Tg)</span>
-            </a>
-            <a href="#tariffs" class="nav-chip">
-              <span class="nav-num">01-04</span>
-              <span class="nav-title">Xizmat Tariflari</span>
-            </a>
-            <a href="#calculator" class="nav-chip">
-              <span class="nav-num">⚡</span>
-              <span class="nav-title">40 Kun Hisoblash</span>
-            </a>
+          <div class="stat-pill">
+            <span class="stat-num">100%</span>
+            <span class="stat-lbl">Kafolat</span>
           </div>
-
-          <div class="hero-actions">
-            <a href="#tariffs" class="btn btn-primary pulse-btn">
-              <span>🔥 Tariflarni Tanlash</span>
-            </a>
-            <a href="#results" class="btn btn-secondary">
-              <span>👀 Oʻquvchilar Natijalari</span>
-            </a>
+          <div class="stat-pill">
+            <span class="stat-num">40</span>
+            <span class="stat-lbl">Kun</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: PSYCHOLOGY & HEALTH BENEFITS (Yangi bo'lim) -->
-    <section id="mind-body" class="benefits-section">
-      <div class="section-intro">
-        <span class="section-pill">PSIXOLOGIYA VA SALOMATLIK</span>
-        <h2 class="section-title">Siz Nimalarga Erishasiz?</h2>
-        <p class="section-desc">Toʻgʻri ovqatlanish va muntazam trenirovka hayotingizni qanday 180 darajaga oʻzgartiradi?</p>
+    <!-- PSYCHOLOGY & HEALTH (iOS Cards) -->
+    <section class="section-block" id="mind">
+      <div class="section-head">
+        <span class="section-tag">Ong & Sogʻliq</span>
+        <h2 class="section-title">Faqat mushak emas — butunlay yangi inson</h2>
       </div>
 
-      <div class="benefits-grid">
-        
-        <!-- Foyda 1: Psixologik erkinlik va stressni yengish -->
-        <div class="benefit-card">
-          <div class="benefit-icon">🧠</div>
-          <h3 class="benefit-title">Ong Ravshanligi va Stresssiz Hayot</h3>
-          <p class="benefit-text">
-            Trenirovka paytida miyada <strong>endorfin va dofamin</strong> (baxt gormonlari) ishlab chiqariladi. Surunkali stress, charchoq va depressiv holatlar yoʻqolib, aqliy faoliyatingiz 2 barobar tezlashadi.
-          </p>
-          <div class="benefit-tag">Psixologik Barqarorlik</div>
+      <div class="mind-grid">
+        <div class="ios-card mind-card">
+          <div class="card-icon-bubble">🧠</div>
+          <div class="card-content">
+            <h3>Ong Ravshanligi</h3>
+            <p>Miya tumanidan qutulasiz, diqqat va qaror qabul qilish tezligi oshadi.</p>
+          </div>
         </div>
 
-        <!-- Foyda 2: Cheksiz Energiya va Uyqu -->
-        <div class="benefit-card">
-          <div class="benefit-icon">⚡</div>
-          <h3 class="benefit-title">Kun Boʻyi Tetiklik va Sifatli Uyqu</h3>
-          <p class="benefit-text">
-            Ertalab turishdagi ogʻirlik va kun davomidagi uyquchanlik unutiladi. Tana chuqur fazadagi uyquga toʻyadi, ertalab energiyaga toʻla va yuqori motivatsiya bilan uygʻonasiz.
-          </p>
-          <div class="benefit-tag">Yuqori Energiya</div>
+        <div class="ios-card mind-card">
+          <div class="card-icon-bubble">⚡</div>
+          <div class="card-content">
+            <h3>Cheksiz Energiya</h3>
+            <p>Ertalabdan quvvatga toʻlasiz, doimiy charchoq va dangasalik yoʻqoladi.</p>
+          </div>
         </div>
 
-        <!-- Foyda 3: Gormonlar va Salomatlik -->
-        <div class="benefit-card">
-          <div class="benefit-icon">❤️</div>
-          <h3 class="benefit-title">Gormonal Muvozanat va Sogʻlom Yurak</h3>
-          <p class="benefit-text">
-            Erkaklarda <strong>testosteron</strong> koʻtariladi, moddalar almashinuvi tezlashadi, qon bosimi va jigar/ichak faoliyati meʼyoriga keladi. Bel va boʻgʻimlardagi ogʻriqlar butunlay bartaraf etiladi.
-          </p>
-          <div class="benefit-tag">Ichki Salomatlik</div>
+        <div class="ios-card mind-card">
+          <div class="card-icon-bubble">🛡️</div>
+          <div class="card-content">
+            <h3>Kuchli Asab & Dofamin</h3>
+            <p>Stress, xavotir kamayadi. Sogʻlom gormonlar evaziga kayfiyat yuqori boʻladi.</p>
+          </div>
         </div>
 
-        <!-- Foyda 4: Temir Intizom va Ishonch -->
-        <div class="benefit-card">
-          <div class="benefit-icon">👑</div>
-          <h3 class="benefit-title">Temir Intizom va Cheksiz Oʻziga Ishonch</h3>
-          <p class="benefit-text">
-            Oʻz tanangizni boshqara olsangiz, butun hayotingizni boshqara olasiz. Oynaga qaraganda gʻurur his qilasiz, jamiyatda va ishingizda qatʼiyatli, oʻziga ishongan inson sifatida ajralib turasiz.
-          </p>
-          <div class="benefit-tag">Liderlik Xarakteri</div>
+        <div class="ios-card mind-card">
+          <div class="card-icon-bubble">👑</div>
+          <div class="card-content">
+            <h3>Temir Oʻziga Ishonch</h3>
+            <p>Oʻzingizga boʻlgan hurmat va intizom hayotingizning har bir jabhasiga oʻtadi.</p>
+          </div>
         </div>
-
-      </div>
-
-      <!-- Psychology Quote Box -->
-      <div class="quote-banner">
-        <div class="quote-icon">“</div>
-        <p class="quote-text">
-          Kuchli tana — kuchli ongning mahsulidir. Biz shunchaki yogʻ eritmaymiz, biz sizning yangi, mustahkam hayot tarzingizni quramiz.
-        </p>
-        <span class="quote-author">— Temur, Sertifikatlangan Murabbiy</span>
       </div>
     </section>
 
-    <!-- SECTION: REAL RESULTS / TELEGRAM POSTS (Yangi bo'lim) -->
-    <section id="results" class="results-section">
-      <div class="section-intro">
-        <span class="section-pill">HAQIQIY NATIJALAR</span>
-        <h2 class="section-title">Oʻquvchilarimiz Transformatsiyasi</h2>
-        <p class="section-desc">Bizda quruq gaplar yoʻq — faqat aniq faktlar va koʻz oʻngingizdagi oʻzgarishlar</p>
+    <!-- HORIZONTAL RESULTS CAROUSEL (Snap Smooth) -->
+    <section class="section-block" id="results">
+      <div class="section-head-row">
+        <div>
+          <span class="section-tag">Natijalar</span>
+          <h2 class="section-title">Haqiqiy oʻzgarishlar</h2>
+        </div>
+        <div class="carousel-nav">
+          <button id="prevBtn" class="nav-arrow-btn" aria-label="Orqaga">‹</button>
+          <button id="nextBtn" class="nav-arrow-btn" aria-label="Oldinga">›</button>
+        </div>
       </div>
 
-      <div class="tg-posts-container">
-        
-        <!-- Post 1: TG 816 -->
-        <div class="tg-post-card">
-          <div class="tg-post-header">
-            <span class="tg-badge">🔥 NATIJA #1</span>
-            <a href="https://t.me/kachok_bodybuildings_fitness/816" target="_blank" class="tg-link-pill">
-              Telegramda koʻrish ↗
-            </a>
+      <div class="results-track-wrapper">
+        <div class="results-track" id="resultsTrack">
+          
+          <!-- Result Card 1 (Telegram Post 816) -->
+          <div class="result-ios-card">
+            <div class="result-badge-row">
+              <span class="tag-success">Telegram Natija #816</span>
+              <span class="tag-time">40 Kun</span>
+            </div>
+            <div class="result-media-box">
+              <div class="media-visual visual-glow-1">
+                <span class="big-metric">-14 kg</span>
+                <span class="metric-desc">Yogʻ yoqotildi va relef ochildi</span>
+              </div>
+            </div>
+            <div class="result-info">
+              <h4>Jaloliddin, 24 yosh</h4>
+              <p>«Beli 12 sm ga qisqardi, doimiy qorin ogʻrigʻi va ogʻirlik ketdi.»</p>
+              <a href="https://t.me/kachok_bodybuildings_fitness/816" target="_blank" class="tme-link-btn">
+                <span>Telegramda koʻrish</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
 
-          <!-- Telegram Embed Widget -->
-          <div class="tg-widget-wrap">
-            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="kachok_bodybuildings_fitness/816" data-width="100%"></script>
+          <!-- Result Card 2 (Telegram Post 813) -->
+          <div class="result-ios-card">
+            <div class="result-badge-row">
+              <span class="tag-success">Telegram Natija #813</span>
+              <span class="tag-time">60 Kun</span>
+            </div>
+            <div class="result-media-box">
+              <div class="media-visual visual-glow-2">
+                <span class="big-metric">+7.5 kg</span>
+                <span class="metric-desc">Toza sifatli mushak massasi</span>
+              </div>
+            </div>
+            <div class="result-info">
+              <h4>Bekzod, 21 yosh</h4>
+              <p>«Ozib ketgan edim, kiyimlar yarashmasdi. Hozir butunlay boshqa odamman.»</p>
+              <a href="https://t.me/kachok_bodybuildings_fitness/813" target="_blank" class="tme-link-btn">
+                <span>Telegramda koʻrish</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
 
-          <div class="tg-card-caption">
-            <h4>Aniq intizom va toʻgʻri reja natijasi</h4>
-            <p>Qatʼiy ratsion va muntazam nazorat orqali qisqa muddatda erishilgan haqiqiy tana transformatsiyasi.</p>
+          <!-- Result Card 3 -->
+          <div class="result-ios-card">
+            <div class="result-badge-row">
+              <span class="tag-success">Telegram Natija</span>
+              <span class="tag-time">45 Kun</span>
+            </div>
+            <div class="result-media-box">
+              <div class="media-visual visual-glow-3">
+                <span class="big-metric">-9 kg</span>
+                <span class="metric-desc">Yassi qorin va kuchli intizom</span>
+              </div>
+            </div>
+            <div class="result-info">
+              <h4>Sardor, 29 yosh</h4>
+              <p>«Ishdagi stress kamaydi, uyqum judayam sifatli boʻlib qoldi.»</p>
+              <a href="https://t.me/kachok_bodybuildings_fitness" target="_blank" class="tme-link-btn">
+                <span>Kanalga oʻtish</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
+
         </div>
-
-        <!-- Post 2: TG 813 -->
-        <div class="tg-post-card">
-          <div class="tg-post-header">
-            <span class="tg-badge">⚡ NATIJA #2</span>
-            <a href="https://t.me/kachok_bodybuildings_fitness/813" target="_blank" class="tg-link-pill">
-              Telegramda koʻrish ↗
-            </a>
-          </div>
-
-          <!-- Telegram Embed Widget -->
-          <div class="tg-widget-wrap">
-            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="kachok_bodybuildings_fitness/813" data-width="100%"></script>
-          </div>
-
-          <div class="tg-card-caption">
-            <h4>Ortiqcha yogʻdan xalos boʻlish va mushak relyefi</h4>
-            <p>Och qolmasdan, faqat toʻgʻri hisoblangan kaloriya va sifatli mahsulotlar yordamidagi natija.</p>
-          </div>
-        </div>
-
       </div>
+      
+      <!-- Dots indicator -->
+      <div class="carousel-dots" id="carouselDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
 
-      <!-- Telegram Channel CTA Banner -->
-      <div class="channel-cta-box">
-        <div class="channel-cta-info">
-          <h3>Yuzlab boshqa natijalar rasmiy kanalimizda!</h3>
-          <p>Har kuni yangi oʻzgarishlar, motivatsiya va foydali maʼlumotlar @kachok_bodybuildings_fitness kanalida.</p>
+    <!-- INTERACTIVE GOAL CALCULATOR (iOS Style Segmented Control) -->
+    <section class="section-block" id="calc">
+      <div class="ios-card calc-card">
+        <span class="section-tag">Ekspress Hisob</span>
+        <h2 class="section-title">40 kunda nima kutyapti?</h2>
+
+        <div class="segmented-control" id="goalSelector">
+          <button class="seg-btn active" data-goal="fatloss">Ozish</button>
+          <button class="seg-btn" data-goal="muscle">Massa</button>
+          <button class="seg-btn" data-goal="health">Sogʻliq</button>
         </div>
-        <a href="https://t.me/kachok_bodybuildings_fitness" target="_blank" class="btn btn-tg-channel">
-          <span>📲 Telegram Kanalga Qoʻshilish</span>
+
+        <div class="calc-dynamic-result" id="calcResult">
+          <div class="calc-stat-hero">
+            <span class="calc-main-num" id="calcStatMain">-6 ... -10 kg</span>
+            <span class="calc-main-lbl" id="calcStatSub">Yogʻ yoqotish va qorinni tortish</span>
+          </div>
+          <ul class="calc-features" id="calcFeatures">
+            <li>✓ Individual taomnoma (och qolmasdan)</li>
+            <li>✓ Kundalik 24/7 shaxsiy nazorat</li>
+            <li>✓ Bosh ogʻrigʻi va xavotirlar ketishi</li>
+          </ul>
+        </div>
+
+        <a href="https://t.me/temur_fitt" target="_blank" class="ios-btn-secondary">
+          Shu maqsad bilan boshlash
         </a>
       </div>
     </section>
 
-    <!-- SECTION: TARIFFS & PRICING -->
-    <section id="tariffs" class="tariffs-section">
-      <div class="section-intro">
-        <span class="section-pill">NARXLAR VA TARIFLAR</span>
-        <h2 class="section-title">Professional 4 Xil Format</h2>
-        <p class="section-desc">Har bir xizmat narxi, kiritilgan imkoniyatlar va qatʼiy qoidalar bilan tanishing</p>
+    <!-- PRICING / PLANS (iOS Subscription Cards) -->
+    <section class="section-block" id="pricing">
+      <div class="section-head">
+        <span class="section-tag">Tariflar</span>
+        <h2 class="section-title">Oʻzingizga mos rejani tanlang</h2>
       </div>
 
-      <div class="tariffs-list">
-
-        <!-- TARIF 01: ERKIN RATSION -->
-        <article id="tariff-01" class="tariff-card">
-          <div class="tariff-top-bar">
-            <span class="brand-code">TEMUR.FIT</span>
-            <span class="tariff-counter">TARIF 01 / 04</span>
-          </div>
-
-          <div class="tariff-header">
-            <div class="tariff-id-badge">01</div>
+      <div class="plans-list">
+        
+        <!-- Standard -->
+        <div class="ios-plan-card">
+          <div class="plan-header">
             <div>
-              <h3 class="tariff-title">ERKIN RATSION</h3>
-              <p class="tariff-subtitle">Oʻzingiz mustaqil ishlashni xohlaysizmi? Bu format — siz uchun.</p>
+              <h3 class="plan-name">STANDART</h3>
+              <span class="plan-duration">40 kunlik dastur</span>
             </div>
+            <div class="plan-price">400.000 <span>UZS</span></div>
           </div>
+          <div class="plan-divider"></div>
+          <p class="plan-desc">Mustaqil shugʻullanish va toʻgʻri ovqatlanish rejasi.</p>
+          <a href="https://t.me/temur_fitt?text=Assalomu%20alaykum,%20Standart%20tarifga%20yozilmoqchiman" target="_blank" class="plan-btn">Tanlash</a>
+        </div>
 
-          <!-- Price Box -->
-          <div class="tariff-price-block">
-            <span class="price-tag-label">NARXI</span>
-            <div class="price-numbers-row">
-              <span class="price-krw">60,000 KRW</span>
-              <span class="price-divider">/</span>
-              <span class="price-uzs">500,000 soʻm</span>
-            </div>
-            <div class="payment-term">bir martalik toʻlov</div>
-          </div>
-
-          <!-- Included List -->
-          <div class="included-section">
-            <div class="included-title">NIMALAR KIRADI</div>
-            <ul class="included-list">
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Holatingiz va maqsadingizdan kelib chiqib, shaxsan oʻzingizga mos <strong>ovqatlanish ratsioni</strong></span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>Individual trenirovka plani</strong> (zal yoki uy uchun)</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Ovqatlarni qanday tayyorlash — <strong>video qoʻllanmalar</strong></span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Koreyada boʻlsangiz — <strong>Coupangʼdan mahsulotlarning tayyor linklari</strong></span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Hammasi <strong>batafsil tushuntirib</strong> beriladi</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="tariff-quote-box">
-            <p>💡 <em>Plan qoʻlingizda — natija oʻzingizga bogʻliq.</em></p>
-          </div>
-
-          <div class="tariff-cta">
-            <a href="https://t.me/karate_patsan?text=Salom%20Temur,%20men%2001%20-%20ERKIN%20RATSION%20(60,000%20KRW%20/%20500,000%20so'm)%20tarifiga%20yozilmoqchiman!" target="_blank" class="btn btn-outline full-width">
-              <span>01 — Erkin Ratsionni Tanlash</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- TARIF 02: 40 KUNLIK TRANSFORMATSIYA -->
-        <article id="tariff-02" class="tariff-card card-featured">
-          <div class="featured-badge-top">🔥 ENG KOʻP TANLANADIGAN TIZIM</div>
-          
-          <div class="tariff-top-bar">
-            <span class="brand-code">TEMUR.FIT</span>
-            <span class="tariff-counter">TARIF 02 / 04</span>
-          </div>
-
-          <div class="tariff-header">
-            <div class="tariff-id-badge active-id">02</div>
+        <!-- VIP / Premium (Highlighted) -->
+        <div class="ios-plan-card featured">
+          <div class="popular-ribbon">Eng Koʻp Tanlangan</div>
+          <div class="plan-header">
             <div>
-              <h3 class="tariff-title">40 KUNLIK TRANSFORMATSIYA</h3>
-              <div class="tag-row">
-                <span class="badge-accent">Yopiq guruh</span>
-                <span class="badge-accent">Qatʼiy nazorat</span>
-              </div>
-              <p class="tariff-subtitle">Bu shunchaki plan emas. Bu — <strong>40 kunlik SYSTEM</strong>.</p>
+              <h3 class="plan-name">VIP KURATORLIK</h3>
+              <span class="plan-duration">40 kun shaxsiy nazorat</span>
             </div>
+            <div class="plan-price">750.000 <span>UZS</span></div>
           </div>
+          <div class="plan-divider"></div>
+          <p class="plan-desc">Har kungi hisobot, doimiy aloqa, psixologik qoʻllab-quvvatlash va 100% natija kafolati.</p>
+          <a href="https://t.me/temur_fitt?text=Assalomu%20alaykum,%20VIP%20tarifga%20yozilmoqchiman" target="_blank" class="plan-btn-primary">VIP Boshlash</a>
+        </div>
 
-          <!-- Price Box -->
-          <div class="tariff-price-block highlighted-price">
-            <span class="price-tag-label">NARXI</span>
-            <div class="price-numbers-row">
-              <span class="price-krw neon-val">100,000 KRW</span>
-              <span class="price-divider">/</span>
-              <span class="price-uzs">700,000 soʻm</span>
-            </div>
-            <div class="payment-term">40 kunlik toʻliq dastur</div>
-          </div>
-
-          <!-- Included List -->
-          <div class="included-section">
-            <div class="included-title">ERKIN RATSIONDAGI HAMMA NARSA + QOʻSHIMCHA:</div>
-            <ul class="included-list">
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>40 kun davomida har kuni aloqadamiz</strong> — hisobot va nazorat</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Aniq ovqatlanish rejasi + individual trenirovka plan</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>Haftasiga kamida 2 marta zal</strong> — shart</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Bahona, skip, “bugun qilolmadim” — <strong>qabul qilinmaydi</strong></span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Strict Rules Box -->
-          <div class="rules-box">
-            <div class="rules-title">⚠️ 40 KUNLIK SYSTEM QOIDALARI:</div>
-            <ol class="rules-list">
-              <li><strong>1.</strong> Har kuni 3 mahal ovqat guruhga tashlanadi. Oʻtkazib yuborish mumkin emas.</li>
-              <li><strong>2.</strong> Har 10 kunda: <strong>vazn + progress rasm</strong> — majburiy.</li>
-              <li><strong>3.</strong> Diet buzish: 1-marta — ogohlantirish, 2-marta — guruhdan chiqarish (refund yoʻq).</li>
-              <li><strong>4.</strong> Har kim faqat oʻz natijasiga javobgar. Bahona qabul qilinmaydi.</li>
-            </ol>
-          </div>
-
-          <div class="tariff-quote-box highlight-quote">
-            <p>⚡ <strong>Qattiqmi? Ha. Lekin natija ham qattiq boʻladi.</strong></p>
-          </div>
-
-          <div class="tariff-cta">
-            <a href="https://t.me/karate_patsan?text=Salom%20Temur,%20men%2002%20-%2040%20KUNLIK%20TRANSFORMATSIYA%20(100,000%20KRW%20/%20700,000%20so'm)%20tarifiga%20yozilmoqchiman!" target="_blank" class="btn btn-primary pulse-btn full-width">
-              <span>🔥 02 — 40 Kunlik Systemga Yozilish</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- TARIF 03: INDIVIDUAL ISHLASH -->
-        <article id="tariff-03" class="tariff-card">
-          <div class="tariff-top-bar">
-            <span class="brand-code">TEMUR.FIT</span>
-            <span class="tariff-counter">TARIF 03 / 04</span>
-          </div>
-
-          <div class="tariff-header">
-            <div class="tariff-id-badge">03</div>
+        <!-- Mentorship -->
+        <div class="ios-plan-card">
+          <div class="plan-header">
             <div>
-              <h3 class="tariff-title">INDIVIDUAL ISHLASH</h3>
-              <p class="tariff-subtitle">Maksimal natija. Maksimal eʼtibor. <strong>Faqat siz va men.</strong></p>
+              <h3 class="plan-name">MENTORLIK (2 OY)</h3>
+              <span class="plan-duration">Toʻliq hayot tarzi oʻzgarishi</span>
             </div>
+            <div class="plan-price">1.400.000 <span>UZS</span></div>
           </div>
-
-          <!-- Price Box -->
-          <div class="tariff-price-block">
-            <span class="price-tag-label">NARXI</span>
-            <div class="price-numbers-row">
-              <span class="price-krw">150,000 KRW</span>
-              <span class="price-divider">/</span>
-              <span class="price-uzs">1,000,000 soʻm</span>
-            </div>
-            <div class="payment-term">premium format</div>
-          </div>
-
-          <!-- Included List -->
-          <div class="included-section">
-            <div class="included-title">NIMALAR KIRADI</div>
-            <ul class="included-list">
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Shaxsiy ovqatlanish ratsioni + trenirovka plan</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Tayyorlash videolari + Coupangʼdan tayyor linklar</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>Har kuni 3 mahal ovqat — toʻgʻridan-toʻgʻri menga yuborasiz</strong></span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Har 10 kunda shaxsiy tarozi va parametrlar nazorati</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>Doimiy shaxsan men bilan aloqa</strong></span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="tariff-quote-box">
-            <p>🎯 <em>Guruh emas — barcha eʼtibor faqat sizda. Savolingiz boʻlsa — javob shaxsan mendan.</em></p>
-          </div>
-
-          <div class="tariff-cta">
-            <a href="https://t.me/karate_patsan?text=Salom%20Temur,%20men%2003%20-%20INDIVIDUAL%20ISHLASH%20(150,000%20KRW%20/%201,000,000%20so'm)%20tarifiga%20yozilmoqchiman!" target="_blank" class="btn btn-outline full-width">
-              <span>03 — Individual Ishlashni Tanlash</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- TARIF 04: OFFLINE TRENIROVKA · SEUL -->
-        <article id="tariff-04" class="tariff-card card-seul">
-          <div class="tariff-top-bar">
-            <span class="brand-code">TEMUR.FIT</span>
-            <span class="tariff-counter">TARIF 04 / 04</span>
-          </div>
-
-          <div class="tariff-header">
-            <div class="tariff-id-badge gold-id">04</div>
-            <div>
-              <h3 class="tariff-title">OFFLINE TRENIROVKA</h3>
-              <div class="tag-row">
-                <span class="badge-gold">🇰🇷 Seul</span>
-                <span class="badge-gold">Zalda shaxsan men bilan</span>
-              </div>
-              <p class="tariff-subtitle">Eng yuqori daraja. Har bir mashgʻulot — mening nazoratim ostida.</p>
-            </div>
-          </div>
-
-          <!-- Price Box -->
-          <div class="tariff-price-block gold-price-block">
-            <span class="price-tag-label">NARXI</span>
-            <div class="price-numbers-row">
-              <span class="price-krw gold-val">650,000 KRW</span>
-            </div>
-            <div class="payment-term">50 kunlik premium dastur · Seulda boʻlganlar uchun</div>
-          </div>
-
-          <!-- Stats Grid -->
-          <div class="offline-stats-grid">
-            <div class="off-stat-box">
-              <strong class="stat-number">21</strong>
-              <span class="stat-caption">SOAT TRENIROVKA</span>
-            </div>
-            <div class="off-stat-box">
-              <strong class="stat-number">3×1</strong>
-              <span class="stat-caption">KUN / HAFTA · 1 SOATDAN</span>
-            </div>
-            <div class="off-stat-box">
-              <strong class="stat-number">50</strong>
-              <span class="stat-caption">KUN · 7 HAFTA</span>
-            </div>
-          </div>
-
-          <!-- Included List -->
-          <div class="included-section">
-            <div class="included-title">NIMALAR KIRADI</div>
-            <ul class="included-list">
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>Individual ishlashdagi BARCHA narsalar:</strong> shaxsiy ratsion, trenirovka plan, videolar, har kunlik nazorat</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>Zalda shaxsan men bilan trenirovka</strong> — texnika va yuklama toʻliq nazoratda</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Haftasiga 3 kun, har biri 1 soatdan — <strong>jami 21 soatlik dastur</strong></span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span><strong>50 kun davomida</strong> online nazorat ham davom etadi</span>
-              </li>
-              <li>
-                <span class="check-icon">✓</span>
-                <span>Seulda boʻlganlar yoki Seulga kela oladiganlar uchun</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="tariff-quote-box gold-quote">
-            <p>🏆 <em>Online emas — yoningizda turib ishlayman. Eng tez va eng ishonchli natija — shu format.</em></p>
-          </div>
-
-          <div class="tariff-cta">
-            <a href="https://t.me/karate_patsan?text=Salom%20Temur,%20men%2004%20-%20OFFLINE%20TRENIROVKA%20SEUL%20(650,000%20KRW)%20tarifiga%20yozilmoqchiman!" target="_blank" class="btn btn-gold full-width">
-              <span>🇰🇷 04 — Seulda Offline Trenirovkaga Yozilish</span>
-            </a>
-          </div>
-        </article>
+          <div class="plan-divider"></div>
+          <p class="plan-desc">Haftalik video qoʻngʻiroqlar, vitaminlar kursi va uzoq muddatli shakl.</p>
+          <a href="https://t.me/temur_fitt?text=Assalomu%20alaykum,%20Mentorlik%20tarifiga%20yozilmoqchiman" target="_blank" class="plan-btn">Tanlash</a>
+        </div>
 
       </div>
     </section>
 
-    <!-- SECTION: COMPARISON TABLE -->
-    <section class="comparison-section">
-      <div class="section-intro">
-        <span class="section-pill">TAQQOSLASH</span>
-        <h2 class="section-title">QAYSI BIRI SIZGA MOS?</h2>
-        <p class="section-desc">Barcha 4 xizmat formatini solishtiring va eng toʻgʻri variantni tanlang</p>
-      </div>
-
-      <div class="table-container">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th class="th-service">XIZMAT</th>
-              <th class="th-col">01</th>
-              <th class="th-col th-highlight">02</th>
-              <th class="th-col">03</th>
-              <th class="th-col">04</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-label">Shaxsiy ratsion + trenirovka plan</td>
-              <td class="tick">✓</td>
-              <td class="tick highlight-cell">✓</td>
-              <td class="tick">✓</td>
-              <td class="tick">✓</td>
-            </tr>
-            <tr>
-              <td class="row-label">Tayyorlash videolari + Coupang linklari</td>
-              <td class="tick">✓</td>
-              <td class="tick highlight-cell">✓</td>
-              <td class="tick">✓</td>
-              <td class="tick">✓</td>
-            </tr>
-            <tr>
-              <td class="row-label">Har kuni hisobot va nazorat</td>
-              <td class="dash">—</td>
-              <td class="tick highlight-cell">✓</td>
-              <td class="tick">✓</td>
-              <td class="tick">✓</td>
-            </tr>
-            <tr>
-              <td class="row-label">Yopiq guruh muhiti (40 kun)</td>
-              <td class="dash">—</td>
-              <td class="tick highlight-cell">✓</td>
-              <td class="dash">—</td>
-              <td class="dash">—</td>
-            </tr>
-            <tr>
-              <td class="row-label">Har 10 kunda vazn + progress nazorati</td>
-              <td class="dash">—</td>
-              <td class="tick highlight-cell">✓</td>
-              <td class="tick">✓</td>
-              <td class="tick">✓</td>
-            </tr>
-            <tr>
-              <td class="row-label">Shaxsan men bilan toʻgʻridan-toʻgʻri aloqa</td>
-              <td class="dash">—</td>
-              <td class="dash highlight-cell">—</td>
-              <td class="tick">✓</td>
-              <td class="tick">✓</td>
-            </tr>
-            <tr>
-              <td class="row-label">Zalda shaxsan trenirovka (Seul, 21 soat)</td>
-              <td class="dash">—</td>
-              <td class="dash highlight-cell">—</td>
-              <td class="dash">—</td>
-              <td class="tick gold-tick">✓</td>
-            </tr>
-            <tr class="price-row">
-              <td class="row-label font-bold">NARX (KRW)</td>
-              <td class="price-cell">60,000</td>
-              <td class="price-cell highlight-cell bold-val">100,000</td>
-              <td class="price-cell">150,000</td>
-              <td class="price-cell gold-cell">650,000</td>
-            </tr>
-            <tr class="price-row-uzs">
-              <td class="row-label">NARX (SOʻM)</td>
-              <td>500,000</td>
-              <td class="highlight-cell">700,000</td>
-              <td>1,000,000</td>
-              <td>—</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Limit Banner -->
-      <div class="limit-banner">
-        <div class="limit-badge">JOYLAR CHEKLANGAN</div>
-        <p class="limit-text">Tanlang va hoziroq Telegramga yozing: <strong>@karate_patsan</strong></p>
-        <div class="limit-quote">"Natija tasodif emas. Natija — system."</div>
-      </div>
-    </section>
-
-    <!-- SECTION: INTERACTIVE CALCULATOR -->
-    <section id="calculator" class="calc-section">
-      <div class="section-intro">
-        <span class="section-pill">INTERAKTIV KALKULYATOR</span>
-        <h2 class="section-title">40 Kunda Qanday Natijaga Erasiz?</h2>
-        <p class="section-desc">Parametrlaringizni kiriting va 40 kunlik natija hamda kaloriya ehtiyojingizni hisoblang</p>
-      </div>
-
-      <div class="calculator-card">
-        <form id="fitnessForm" class="calc-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="gender">Jinsingiz</label>
-              <select id="gender" class="form-control">
-                <option value="male">Erkak</option>
-                <option value="female">Ayol</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="age">Yoshingiz</label>
-              <input type="number" id="age" class="form-control" value="25" min="14" max="70" required />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="height">Boʻyingiz (sm)</label>
-              <input type="number" id="height" class="form-control" value="175" min="120" max="220" required />
-            </div>
-            <div class="form-group">
-              <label for="weight">Hozirgi vazningiz (kg)</label>
-              <input type="number" id="weight" class="form-control" value="82" min="35" max="180" required />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="goal">Asosiy Maqsadingiz</label>
-            <select id="goal" class="form-control">
-              <option value="cut">🔥 Quritish & Yogʻ eritish (Relyef chiqarish)</option>
-              <option value="loss">⚖️ Tez va sifatli ozish (Vazn tashlash)</option>
-              <option value="lean">💪 Quruq mushak massasi yigʻish</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="activity">Haftalik faollik darajangiz</label>
-            <select id="activity" class="form-control">
-              <option value="1.2">Kam harakat (Oʻtirib ishlash)</option>
-              <option value="1.375" selected>Oʻrtacha (Haftada 2-3 marta zal)</option>
-              <option value="1.55">Faol (Haftada 4-5 marta zal)</option>
-              <option value="1.725">Juda faol (Ogʻir sport)</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-primary full-width">
-            <span>⚡ 40 Kunlik Rejani Hisoblash</span>
-          </button>
-        </form>
-
-        <!-- Calculation Results -->
-        <div id="calcResults" class="calc-results hidden">
-          <div class="results-header">
-            <h3>Sizning Shaxsiy 40 Kunlik Prognozingiz:</h3>
-          </div>
-          <div class="results-grid">
-            <div class="result-box glow-box">
-              <span class="res-lbl">40 kunda kutiladigan vazn</span>
-              <strong id="targetWeight" class="res-val">-</strong>
-            </div>
-            <div class="result-box">
-              <span class="res-lbl">Kunlik tavsiya kaloriya</span>
-              <strong id="targetCalories" class="res-val">-</strong>
-            </div>
-            <div class="result-box">
-              <span class="res-lbl">Kunlik suv meʼyori</span>
-              <strong id="waterIntake" class="res-val">-</strong>
-            </div>
-            <div class="result-box">
-              <span class="res-lbl">BMI (Tana massasi indeksi)</span>
-              <strong id="bmiVal" class="res-val">-</strong>
-            </div>
-          </div>
-
-          <div class="result-note" id="resultAdvice">
-            Temurning tizimi orqali och qolmasdan 40 kunda bu natijaga kafolatli erishasiz!
-          </div>
-
-          <a id="sendResultBtn" href="#" target="_blank" class="btn btn-primary full-width tg-action-btn pulse-btn">
-            <span>📩 Natijani Temurga yuborish (@karate_patsan)</span>
-          </a>
+    <!-- GUARANTEE BADGE -->
+    <section class="section-block">
+      <div class="ios-guarantee-card">
+        <div class="guarantee-icon">🛡️</div>
+        <div class="guarantee-text">
+          <h4>100% Natija Kafolati</h4>
+          <p>Dastur qoidalariga amal qilib natijaga erishmasangiz — pullaringiz toʻliq qaytariladi.</p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: COACH & BIO -->
-    <section class="coach-bio-section">
-      <div class="bio-card">
-        <div class="bio-header">
-          <img src="temur.jpg" alt="Temur Coach" class="bio-avatar" onerror="this.src='https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&auto=format&fit=crop&q=80'" />
-          <div>
-            <h3 class="bio-name">TEMUR (@temur.fit)</h3>
-            <p class="bio-role">Sertifikatlangan Murabbiy · NPCA / MUSA / WNGP</p>
-          </div>
-        </div>
-        <p class="bio-desc">
-          "Men natijaga javob beraman. Har bir oʻquvchimning koʻrsatkichini tahlil qilaman va maqsadiga yetgunicha qoʻllab-quvvatlayman. Hoziroq oʻzingizga mos xizmatni tanlang va menga yozing!"
-        </p>
-        <div class="bio-buttons">
-          <a href="https://t.me/karate_patsan" target="_blank" class="btn btn-primary">
-            <span>💬 Telegram: @karate_patsan</span>
-          </a>
-          <a href="https://instagram.com/temur.fit" target="_blank" class="btn btn-secondary">
-            <span>📸 Instagram: @temur.fit</span>
-          </a>
-        </div>
+    <!-- FOOTER -->
+    <footer class="ios-footer">
+      <div class="footer-brand">TEMUR.FIT</div>
+      <p class="footer-sub">Sogʻlom tana. Kuchli ong. Temir intizom.</p>
+      <div class="footer-links">
+        <a href="https://t.me/temur_fitt" target="_blank">Telegram Murabbiy</a>
+        <span>•</span>
+        <a href="https://t.me/kachok_bodybuildings_fitness" target="_blank">Kanal & Natijalar</a>
       </div>
-    </section>
+      <p class="footer-copy">© 2025 TEMUR.FIT. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
   </main>
 
-  <!-- Sticky Bottom Bar for Quick Mobile Order -->
-  <div class="mobile-sticky-bar">
-    <div class="sticky-text">
-      <strong>TEMUR.FIT · 2026</strong>
-      <span>Joylar qatʼiy cheklangan</span>
-    </div>
-    <a href="#tariffs" class="btn btn-primary btn-sm pulse-btn">
-      <span>Tariflar 🔥</span>
+  <!-- iOS BOTTOM TAB BAR (Native Mobile Feel) -->
+  <nav class="ios-tabbar">
+    <a href="#home" class="tab-item active" data-target="home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span>Asosiy</span>
     </a>
-  </div>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <span class="logo-accent">TEMUR</span><span class="dot-green">.FIT</span> · 2026
-        <p>NPCA / MUSA / WNGP Sertifikatlangan Fitnes & Trenirovka Tizimi</p>
-      </div>
-      <div class="footer-social-links">
-        <a href="https://t.me/kachok_bodybuildings_fitness" target="_blank">Kanal: @kachok_bodybuildings_fitness</a>
-        <a href="https://t.me/karate_patsan" target="_blank">Telegram: @karate_patsan</a>
-        <a href="https://instagram.com/temur.fit" target="_blank">Instagram: @temur.fit</a>
-      </div>
-      <p class="copyright">temur.fit — 2026. Barcha huquqlar himoyalangan.</p>
-    </div>
-  </footer>
+    <a href="#mind" class="tab-item" data-target="mind">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      <span>Sogʻliq</span>
+    </a>
+    <a href="#results" class="tab-item" data-target="results">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      <span>Natijalar</span>
+    </a>
+    <a href="#pricing" class="tab-item" data-target="pricing">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+      <span>Tariflar</span>
+    </a>
+    <a href="https://t.me/temur_fitt" target="_blank" class="tab-item tab-highlight">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+      <span>Aloqa</span>
+    </a>
+  </nav>
 
   <script src="app.js"></script>
 </body>

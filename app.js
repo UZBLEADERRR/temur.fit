@@ -1,101 +1,138 @@
-// TEMUR.FIT — Interaktiv Logic & Calculator
+// ===================================================
+// TEMUR.FIT — iOS Native Interactions & Logic
+// ===================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  initCalculator();
-});
+  
+  // 1. Interactive Goal Calculator
+  const goalButtons = document.querySelectorAll('.seg-btn');
+  const mainNum = document.getElementById('calcStatMain');
+  const mainSub = document.getElementById('calcStatSub');
+  const featuresList = document.getElementById('calcFeatures');
 
-// BMI & 40-day target calculation
-function initCalculator() {
-  const form = document.getElementById('fitnessForm');
-  const resultsDiv = document.getElementById('calcResults');
-  const targetWeightEl = document.getElementById('targetWeight');
-  const targetCaloriesEl = document.getElementById('targetCalories');
-  const waterIntakeEl = document.getElementById('waterIntake');
-  const bmiValEl = document.getElementById('bmiVal');
-  const sendResultBtn = document.getElementById('sendResultBtn');
-  const resultAdviceEl = document.getElementById('resultAdvice');
-
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const gender = document.getElementById('gender').value;
-    const age = parseFloat(document.getElementById('age').value) || 25;
-    const height = parseFloat(document.getElementById('height').value) || 175;
-    const weight = parseFloat(document.getElementById('weight').value) || 80;
-    const goal = document.getElementById('goal').value;
-    const activity = parseFloat(document.getElementById('activity').value) || 1.375;
-
-    // 1. BMI calculation (weight / height in m ^ 2)
-    const heightM = height / 100;
-    const bmi = (weight / (heightM * heightM)).toFixed(1);
-
-    // 2. Basal Metabolic Rate (BMR) - Mifflin-St Jeor formula
-    let bmr = (10 * weight) + (6.25 * height) - (5 * age);
-    if (gender === 'male') {
-      bmr += 5;
-    } else {
-      bmr -= 161;
+  const goalData = {
+    fatloss: {
+      num: '-6 ... -10 kg',
+      sub: 'Yogʻ yoʻqotish va qorinni tortish',
+      features: [
+        '✓ Individual taomnoma (och qolmasdan)',
+        '✓ Kundalik 24/7 shaxsiy nazorat',
+        '✓ Ogʻirlik va xavotirlar butkul ketishi'
+      ]
+    },
+    muscle: {
+      num: '+4 ... +7 kg',
+      sub: 'Sifatli va quruq mushak massasi',
+      features: [
+        '✓ Aniq gipertrofiya mashqlar dasturi',
+        '✓ Yuqori kaloriyali toʻgʻri ratsion',
+        '✓ Yelka va koʻkrak qafasining kengayishi'
+      ]
+    },
+    health: {
+      num: '2X Energiya',
+      sub: 'Gormonlar balansi va tiniq uyqu',
+      features: [
+        '✓ Ertalab yengil va tetik uygʻonish',
+        '✓ Testosteron & dofamin oshishi',
+        '✓ Qad-qomat va umurtqa tiklanishi'
+      ]
     }
+  };
 
-    // Total Daily Energy Expenditure (TDEE)
-    const tdee = bmr * activity;
+  goalButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      goalButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-    // 3. Goal Adjustment & 40-Day Expected Weight
-    let targetCalories = Math.round(tdee);
-    let expectedWeightChange = 0;
-    let goalText = '';
+      const goal = btn.dataset.goal;
+      const data = goalData[goal];
 
-    if (goal === 'cut') {
-      targetCalories = Math.round(tdee * 0.8);
-      expectedWeightChange = -(Math.min(10, Math.max(4, weight * 0.08))).toFixed(1);
-      goalText = 'Quritish va Relyef';
-    } else if (goal === 'loss') {
-      targetCalories = Math.round(tdee * 0.75);
-      expectedWeightChange = -(Math.min(12, Math.max(5, weight * 0.09))).toFixed(1);
-      goalText = 'Tezkor Ozish';
-    } else if (goal === 'lean') {
-      targetCalories = Math.round(tdee * 1.05);
-      expectedWeightChange = +(2.5).toFixed(1);
-      goalText = 'Quruq Mushak';
-    }
+      if (data && mainNum && mainSub && featuresList) {
+        // Quick subtle fade transition
+        mainNum.style.opacity = '0';
+        mainSub.style.opacity = '0';
+        featuresList.style.opacity = '0';
 
-    const finalWeight = (weight + parseFloat(expectedWeightChange)).toFixed(1);
+        setTimeout(() => {
+          mainNum.textContent = data.num;
+          mainSub.textContent = data.sub;
+          featuresList.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
 
-    // 4. Daily Water Requirement (approx 35-40ml per kg)
-    const waterLiters = ((weight * 0.035) + 0.5).toFixed(1);
-
-    // Render results
-    targetWeightEl.textContent = `${finalWeight} kg (${expectedWeightChange > 0 ? '+' : ''}${expectedWeightChange} kg)`;
-    targetCaloriesEl.textContent = `${targetCalories} kkal / kun`;
-    waterIntakeEl.textContent = `${waterLiters} litr / kun`;
-    bmiValEl.textContent = `${bmi} (${getBmiStatus(bmi)})`;
-
-    resultAdviceEl.textContent = `🎯 Maqsad: ${goalText}. 40 kunda ${Math.abs(expectedWeightChange)} kg natijaga toʻgʻri ratsion va kuniga ${targetCalories} kkal bilan och qolmasdan erishasiz!`;
-
-    // Prepare Telegram direct link with pre-filled data
-    const message = encodeURIComponent(
-      `Salom Temur! Men saytingizda 40 kunlik kalkulyatordan oʻtdim:\n` +
-      `👤 Jins: ${gender === 'male' ? 'Erkak' : 'Ayol'}, Yosh: ${age}\n` +
-      `📏 Boʻy: ${height} sm, Vazn: ${weight} kg\n` +
-      `🎯 Maqsad: ${goalText}\n` +
-      `🔥 Kutilayotgan natija: ${finalWeight} kg (${expectedWeightChange} kg)\n` +
-      `Men 40 kunlik kursingizda qatnashmoqchiman!`
-    );
-
-    sendResultBtn.href = `https://t.me/karate_patsan?text=${message}`;
-
-    // Show result section smoothly
-    resultsDiv.classList.remove('hidden');
-    resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          mainNum.style.opacity = '1';
+          mainSub.style.opacity = '1';
+          featuresList.style.opacity = '1';
+        }, 150);
+      }
+    });
   });
-}
 
-function getBmiStatus(bmi) {
-  const val = parseFloat(bmi);
-  if (val < 18.5) return 'Kam vazn';
-  if (val < 25) return 'Normal';
-  if (val < 30) return 'Ortiqcha vazn';
-  return 'Yuqori vazn';
-}
+  // 2. Horizontal Results Carousel Navigation & Dots
+  const trackWrapper = document.querySelector('.results-track-wrapper');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dots = document.querySelectorAll('.carousel-dots .dot');
+
+  if (trackWrapper && prevBtn && nextBtn) {
+    const cardWidth = 302; // Card width (290px) + gap (12px)
+
+    nextBtn.addEventListener('click', () => {
+      trackWrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      trackWrapper.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+
+    // Update active dot on scroll
+    trackWrapper.addEventListener('scroll', () => {
+      const scrollPos = trackWrapper.scrollLeft;
+      const index = Math.round(scrollPos / cardWidth);
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === index);
+      });
+    }, { passive: true });
+  }
+
+  // 3. iOS Bottom Tab Bar Active State Sync
+  const tabLinks = document.querySelectorAll('.ios-tabbar .tab-item[data-target]');
+  const sections = document.querySelectorAll('section[id]');
+
+  function updateActiveTab() {
+    let currentSection = 'home';
+    const scrollPosition = window.scrollY + 200;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    tabLinks.forEach(tab => {
+      if (tab.dataset.target === currentSection) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveTab, { passive: true });
+
+  // 4. Smooth Anchor Click for Tabs
+  tabLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+});
