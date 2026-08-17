@@ -1,0 +1,32 @@
+name: Find First Code Commit
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Find and restore first code commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # index.html qo'shilgan eng birinchi commitni topish
+          FIRST_CODE_COMMIT=$(git log --diff-filter=A --format=%H -- index.html | tail -n 1)
+          echo "First code commit: $FIRST_CODE_COMMIT"
+          
+          # Hozirgi fayllarni tozalash
+          rm -rf *
+          
+          # O'sha commitdagi fayllarni olib kelish
+          git checkout $FIRST_CODE_COMMIT -- .
+          
+          git add .
+          git commit -m "Restore first actual code commit" || echo "No changes"
+          git push origin main
